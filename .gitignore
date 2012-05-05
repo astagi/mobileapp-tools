@@ -1,0 +1,11 @@
+#General ignore
+.metadata
+.classpath
+.project
+.settings
+proguard.cfg
+gen/
+assets/
+bin/
+*~
+project.properties
