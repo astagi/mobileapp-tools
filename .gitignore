@@ -5,7 +5,6 @@
 .settings
 proguard.cfg
 gen/
-assets/
 bin/
 *~
 project.properties
