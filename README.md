@@ -2,3 +2,8 @@ mobileapp-tools
 ===============
 
 Show me the tools, I&#39;ll build the world.
+
+Before start please read the Phonegap Get Started Guide http://phonegap.com/start
+
+- Tutorial 1
+In this tutorial we are going to implement a simple interface to show a runtime created timeline, using the scroll and playing a sound on start. The amazing thing we want to show is that we are using the same css and media resources of Turpial for desktop.
