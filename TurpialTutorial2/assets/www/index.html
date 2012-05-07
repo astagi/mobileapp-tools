@@ -27,7 +27,7 @@
 			
             //Let's add to our document an event listener on deviceready event and play a sound
 			
-            document.addEventListener("deviceready",onDeviceReady,false);
+            document.addEventListener("deviceready", onDeviceReady, false);
 
             function onDeviceReady () {
                 //Make a background sound using Phonegap when device is ready
@@ -35,22 +35,24 @@
             }
 
             /*
-            This is the core of our tutorial: we create a string with some
-            html code representing a tweet (we will see how parametrize it
-            using templates) and then we load iScroll.
+            This is the core of our tutorial: we will fetch a .partial file representing
+            a template, we fill it and show in the list.
             */
 			
             var tweetList = "";
 				
-            //Show the tweets
+            //Show the tweets. Just get the template and fill the values.
 					
             templates.getTemplate("templates/status.partial", function(template) {
+            var values = { avatar : "pixmaps/unknown.png", username: "4ndreaSt4gi", 
+                            message: "Hi Turpial mobile!", reposted_by : "Retweeted by Turpial",
+                            timestamp : "oct 18, 02:07 am from web in reply to xyz"}
                 for(var i = 0; i < 20; i++)
-                    tweetList += templates.fillTemplate(template, { avatar : "pixmaps/unknown.png", username: "4ndreaSt4gi", message: "Hi Turpial mobile!"});
+                    tweetList += templates.fillTemplate(template, values);
                 $('#tweetList').html(tweetList);
                 myScroll = new iScroll('wrapper', { hideScrollbar: true, fadeScrollbar: true });
              });
-			
+            			
         });
 				
     </script>
