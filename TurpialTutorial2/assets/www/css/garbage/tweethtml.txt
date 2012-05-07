@@ -1,0 +1,32 @@
+           <div class="tweet"> 
+                <input name="indicator" type="hidden" value="" /> 
+                <div id="replycontainer-<% @status_replyto_id %>" class="replylist" style="display: none;"> \
+                    <div id="replystatus-<% @status_replyto_id %>" > 
+                    </div> 
+                </div> 
+                <div class="icon"><img src="pixmaps/unknown.png" width="48" height="48" /></div> 
+                <div class="content" name="<% @status_id %>"> 
+                    <div> 
+                        <label class="name">4ndreaSt4gi</label> 
+                        <div class="clearfix"></div> 
+                    </div> 
+                    <div class="message">Hi Turpial Mobile!</div> 
+                    <div class="timestamp">oct 18, 02:07 am from web in reply to xyz</div> 
+                    <div class="repost"><label>Retweeted by Turpial</label></div> 
+                </div> 
+                <div class="clearfix"></div> 
+                <div class="options"> 
+                    <div class="button-box" style="display: none;"> 
+                        <div class="clearfix"></div> 
+                    </div> 
+                    <div class="progress-box" style="display: none;"> 
+                        <label name="progress-msg-<% @status_id %>">Loading...</label> 
+                    </div> 
+                    <div class="clearfix"></div> 
+                </div> 
+                <div id="bubble-<% @status_id %>" class="content-divider" style="display:none"> 
+                    <div class="outer-carrot"></div> 
+                    <div class="inner-carrot"></div> 
+                    <div class="bubble-x"></div> 
+                </div> 
+            </div>
