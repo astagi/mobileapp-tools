@@ -7,5 +7,8 @@ This repository introduces new developers to the fantastic world of Phonegap (ht
 
 Before start please read the Phonegap Get Started Guide http://phonegap.com/start
 
-- Tutorial 1:
+- Tutorial 1 (Our first Phonegap application and iScroll):
 In this tutorial we are going to implement a simple interface to show a runtime created timeline, using the scroll and playing a sound on start. The amazing thing we want to show is that we are using the same css and media resources of Turpial for desktop.
+
+- Tutorial 2 (A simple template system compatible with Turpial templates):
+In this tutorial we are going to implement a simple template system that is able to read a template file and create some html code representing a tweet just passing a hash table like this {username : "myusername", message : "My first tweet" } etc.. You can find the implementation in js/templates.js
