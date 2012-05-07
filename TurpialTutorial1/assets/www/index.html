@@ -1,18 +1,17 @@
 <html>
 <head>
 
-	<!--Initialization -->
+    <!--Initialization -->
 
-	<meta name="viewport" content="width=100%; initial-scale=1; user-scalable=no" />
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<base><!-- used to process relative links in content -->
-	<title>Turpial</title>
-	
-	
-	<!-- Let's import some css from Turpial desktop, some changes to adapt -->
+    <meta name="viewport" content="width=100%; initial-scale=1; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <base><!-- used to process relative links in content -->
+    <title>Turpial</title>
+        
+    <!-- Let's import some css from Turpial desktop, some changes to adapt -->
 	
     <link href="css/common.css" rel="stylesheet" type="text/css">
-	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     
     
     <!-- Let's import phonegap, jquery and iscroll -->
@@ -21,25 +20,24 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/iscroll.js"></script>
     
-    
     <script type="text/javascript">
-		var myScroll;
-		$(document).ready(function() {	
+        var myScroll;
+        $(document).ready(function() {	
 			
-			//Let's add to our document an event listener on deviceready event and play a sound
+            //Let's add to our document an event listener on deviceready event and play a sound
 			
-			document.addEventListener("deviceready",onDeviceReady,false);
+            document.addEventListener("deviceready",onDeviceReady,false);
 
-			function onDeviceReady () {
-				//Make a background sound using Phonegap when device is ready
-				new Media('/android_asset/www/sounds/cambur_pinton.ogg').play();
-			}
+            function onDeviceReady () {
+                //Make a background sound using Phonegap when device is ready
+                new Media('/android_asset/www/sounds/cambur_pinton.ogg').play();
+            }
 
-			/*
-			This is the core of our tutorial: we create a string with some
-			html code representing a tweet (we will see how parametrize it
-			using templates) and then we load iScroll.
-			*/
+            /*
+            This is the core of our tutorial: we create a string with some
+            html code representing a tweet (we will see how parametrize it
+            using templates) and then we load iScroll.
+            */
 			
             var tweetHtml = 
 	            '<div class="tweet"> \
@@ -75,28 +73,28 @@
 	                </div> \
 	            </div>';
             
-            var tweetList = "";
+	        var tweetList = "";
             
-			for(var i = 0; i < 20; i++)
-				tweetList += tweetHtml;
+	        for(var i = 0; i < 20; i++)
+	            tweetList += tweetHtml;
 				
-			//Show the tweets
-			$('#tweetList').html(tweetList);
+	        //Show the tweets
+            $('#tweetList').html(tweetList);
 			
-			//Activate iScroll for the element with id='wrapper'
-			myScroll = new iScroll('wrapper', { hideScrollbar: true, fadeScrollbar: true });
+            //Activate iScroll for the element with id='wrapper'
+            myScroll = new iScroll('wrapper', { hideScrollbar: true, fadeScrollbar: true });
 			
-		});
+        });
 				
-	</script>
+    </script>
 
     
 </head>
 <body>
 
-		<!-- The header of our application -->
+        <!-- The header of our application -->
 
-		<header id="mainHeader" class="header">
+        <header id="mainHeader" class="header">
             <div class="combo">
                 <img src="pixmaps/twitter.png" />
                 <label>@4ndreaSt4gi :: Timeline</label>
@@ -109,13 +107,13 @@
         
         <!-- Our timeline-->
         
-		<div id="timeline" class="list">
-			<div id="wrapper" style="height: 100%;">
-				<div id="tweetList" class="scroller">
-					<!-- We will insert our tweets here -->
+        <div id="timeline" class="list">
+            <div id="wrapper" style="height: 100%;">
+                <div id="tweetList" class="scroller">
+                    <!-- We will insert our tweets here -->
                 </div>
-			</div>
-		</div>
-    
+            </div>
+        </div>
+        
 </body>
 </html>
