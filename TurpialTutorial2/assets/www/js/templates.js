@@ -14,7 +14,7 @@ window.templates = function() {
         if(templates[filename])
             callback(templates[filename]);
         else
-            $.get("templates/status.partial", function(response) {
+            $.get(filename, function(response) {
                 templates[filename] = response;
                 callback(response);
             });

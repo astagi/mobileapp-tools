@@ -175,6 +175,7 @@
     margin-top: 5px;
     position: relative;
     min-height: 50px;
+    overflow: hidden;
 }
 
 .tweet .content .mark {
