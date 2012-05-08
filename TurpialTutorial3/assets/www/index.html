@@ -87,7 +87,7 @@
 	                for(var i = 0; i < 20; i++)
 	                    tweetList += templates.fillTemplate(template, values);
 	                $('#tweetList-' + id).html(tweetList);
-	                myScroll = new iScroll('wrapper-' + id, { hideScrollbar: true, fadeScrollbar: true });
+	                myScroll = new iScroll('wrapper-' + id, { hideScrollbar: true, fadeScrollbar: false });
 	             });
             }
             
