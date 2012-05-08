@@ -34,7 +34,7 @@
 .navmenu-element div{
     border-right: 1px black solid;
     display: table-cell;
-    height:30px;
+    height:40px;
     vertical-align:middle;
     color: #303030;
     font-weight: bold;
@@ -51,7 +51,7 @@
 .navmenu-element-clicked div{
     border-right: 1px black solid;
     display: table-cell;
-    height:30px;
+    height:40px;
     vertical-align:middle;
     font-weight: bold;   
 }
@@ -61,7 +61,7 @@
 	top:0px;
 	left:0px;
 	width:100%;
-	height: 60px;
+	height: 70px;
     float: left;
     background-color: #000;
     color: #ebebeb;
@@ -71,6 +71,7 @@
 .header .topcombo {
     float: left;
     width:100%;
+    height: 30px;
     background: -webkit-gradient(linear, left top, left bottom, from(#484848), to(#000000));
 }
 
@@ -78,6 +79,7 @@
     padding: 0px 0 0 3px;
     display: block;
     float: left;
+    vertical-align:middle;
 }
 
 .header .topcombo label {
@@ -86,6 +88,7 @@
     max-height: 18px;
     font-size: 16px;
     font-weight: bold;
+    vertical-align:middle;
 }
 
 
@@ -146,7 +149,7 @@
 	background-color: #fff;
     color: #000;
 	position:absolute;
-	top:60px;	
+	top:70px;	
 	width:100%;
 	bottom: 1px;
 	overflow-y: auto;
