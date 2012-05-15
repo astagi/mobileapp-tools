@@ -15,3 +15,9 @@ In this tutorial we are going to implement a simple template system that is able
 
 - Tutorial 3 (Moving between pages):
 We don't want to show only the timeline. We need now to create a cool menu that allows us to switch between stream tweets, mentions, directs and shows our profile. We don't need to define pages for the moment, just make a better header, the menu and the engine, that is the main part of this tutorial.
+
+- Tutorial 4 (Menu and toasts): here we go! first time we import external plugins written in native code (Java in this case)!! These plugin are usually ported on every other platform and this allows us to write the code only in javascript whitout concerning about how the native code works. In this case we imported the "simplemenu" and the "toast plugin" ( ok, I imported someone more but nevermind, we don't need them now ). It's nice to see how it's easy to make them working. I imported the source in my Java code, modified the xml file ( see phonegap documentation first ) and finally I defined my menu using only html and javascript and launching toasts into javascriptcallbacks. Following the code will explain you better :)
+
+- Tutorial 5 (Save data with Lawnchair): coming soon :)
+
+- Tutorial 6 (Globalization and translators contribution): coming soon :)
