@@ -1,11 +1,25 @@
 mobileapp-tools
 ===============
 
-Show me the tools, I&#39;ll build the world.
+**Show me the tools, I&#39;ll build the world**
+
+What is it?
+-----------
 
 This repository introduces new developers to the fantastic world of Phonegap (http://phonegap.com/about) that Turpial team will use to build the Turpial mobile app. In these tutorials we will try to build a simil-twitter application and find the best tools to develop with Phonegap, for example iScroll to scroll pages or Lawnchair to save data. Enjoy :)
 
-Before start please read the Phonegap Get Started Guide http://phonegap.com/start
+What do I need?
+---------------
+
+Just Eclipse, Android SDK and Phonegap! Before start please read the Phonegap Get Started Guide http://phonegap.com/start
+
+Uhm there are a lot of bugs
+---------------------------
+
+Yeah, that's true, we just want to show you all the tools that we are going to use in Turpial-mobile as fast as possible! :) bug are fixed there, anyway when we have time we will fix them in the tutorial, but really is not required for our purpose.. Anyway you can contribute with patches here or show us better tools if any, would be awesome :)
+
+Index
+-----
 
 - Tutorial 1 (Our first Phonegap application and iScroll):
 In this tutorial we are going to implement a simple interface to show a runtime created timeline, using the scroll and playing a sound on start. The amazing thing we want to show is that we are using the same css and media resources of Turpial for desktop.
