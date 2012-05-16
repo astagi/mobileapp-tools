@@ -9,7 +9,7 @@
     <title>Turpial</title>
         
     <!-- Let's import some css from Turpial desktop, some changes to adapt -->
-	
+    
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     
@@ -23,10 +23,10 @@
     
     <script type="text/javascript">
         var myScroll;
-        $(document).ready(function() {	
-			
+        $(document).ready(function() {  
+            
             //Let's add to our document an event listener on deviceready event and play a sound
-			
+            
             document.addEventListener("deviceready", onDeviceReady, false);
 
             function onDeviceReady () {
@@ -68,36 +68,36 @@
             onMenuItemClicked("menu-timeline");
             
             function showTweets(id) {
-	            var tweetList = "";
-				
-	            //Show the tweets. Just get the template and fill the values.
-				
-	            if(id == "timeline-page")
-	                var imagePath = "pixmaps/unknown.png"
-	            else
-	                var imagePath = "pixmaps/mentionsdummy.png"
+                var tweetList = "";
+                
+                //Show the tweets. Just get the template and fill the values.
+                
+                if(id == "timeline-page")
+                    var imagePath = "pixmaps/unknown.png"
+                else
+                    var imagePath = "pixmaps/mentionsdummy.png"
 
-	            var messageText = "Hi Turpial mobile!I am in the " + id + " page";
-	            
-	            var values = { avatar : imagePath, username: "4ndreaSt4gi", 
+                var messageText = "Hi Turpial mobile!I am in the " + id + " page";
+                
+                var values = { avatar : imagePath, username: "4ndreaSt4gi", 
                         message: messageText, reposted_by : "Retweeted by Turpial",
                         timestamp : "oct 18, 02:07 am from web in reply to xyz"}
-	            
-	            templates.getTemplate("templates/mobile-status.partial", function(template) {
-	                for(var i = 0; i < 20; i++)
-	                    tweetList += templates.fillTemplate(template, values);
-	                $('#tweetList-' + id).html(tweetList);
-	                myScroll = new iScroll('wrapper-' + id, { hideScrollbar: true, fadeScrollbar: false });
-	             });
+                
+                templates.getTemplate("templates/mobile-status.partial", function(template) {
+                    for(var i = 0; i < 20; i++)
+                        tweetList += templates.fillTemplate(template, values);
+                    $('#tweetList-' + id).html(tweetList);
+                    myScroll = new iScroll('wrapper-' + id, { hideScrollbar: true, fadeScrollbar: false });
+                 });
             }
             
             function pageAction(id) {
                 if(id == "timeline-page" || id == "mentions-page")
                     showTweets(id)
             }
-            			
+                        
         });
-				
+                
     </script>
 
 </head>
@@ -123,13 +123,13 @@
         
         <!-- Our timeline-->
         <div id="timeline-page" class="tweetpage">
-	        <div class="list">
-	            <div id="wrapper-timeline-page" style="height: 100%;">
-	                <div id="tweetList-timeline-page" class="scroller">
-	                    <!-- We will insert our tweets here -->
-	                </div>
-	            </div>
-	        </div>
+            <div class="list">
+                <div id="wrapper-timeline-page" style="height: 100%;">
+                    <div id="tweetList-timeline-page" class="scroller">
+                        <!-- We will insert our tweets here -->
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- Our mentions-->
@@ -150,7 +150,7 @@
         
         <!-- Our info-->
         <div id="me-page" class="tweetpage">
-	        <label>The info will be shown here</label>
+            <label>The info will be shown here</label>
         </div>
         
 </body>

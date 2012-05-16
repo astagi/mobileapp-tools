@@ -9,7 +9,7 @@
     <title>Turpial</title>
         
     <!-- Let's import some css from Turpial desktop, some changes to adapt -->
-	
+    
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     
@@ -23,10 +23,10 @@
     
     <script type="text/javascript">
         var myScroll;
-        $(document).ready(function() {	
-			
+        $(document).ready(function() {  
+            
             //Let's add to our document an event listener on deviceready event and play a sound
-			
+            
             document.addEventListener("deviceready", onDeviceReady, false);
 
             function onDeviceReady () {
@@ -38,11 +38,11 @@
             This is the core of our tutorial: we will fetch a .partial file representing
             a template, we fill it and show in the list.
             */
-			
+            
             var tweetList = "";
-				
+                
             //Show the tweets. Just get the template and fill the values.
-					
+                    
             templates.getTemplate("templates/status.partial", function(template) {
             var values = { avatar : "pixmaps/unknown.png", username: "4ndreaSt4gi", 
                             message: "Hi Turpial mobile!", reposted_by : "Retweeted by Turpial",
@@ -52,9 +52,9 @@
                 $('#tweetList').html(tweetList);
                 myScroll = new iScroll('wrapper', { hideScrollbar: true, fadeScrollbar: true });
              });
-            			
+                        
         });
-				
+                
     </script>
 
 </head>

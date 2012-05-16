@@ -9,7 +9,7 @@
     <title>Turpial</title>
         
     <!-- Let's import some css from Turpial desktop, some changes to adapt -->
-	
+    
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     
@@ -28,43 +28,43 @@
     
     <script type="text/javascript">
         var myScroll;
-        $(document).ready(function() {	
-						
+        $(document).ready(function() {  
+                        
             document.addEventListener("deviceready", onDeviceReady, false);
 
             function onDeviceReady () {
                 new Media('/android_asset/www/sounds/cambur_pinton.ogg').play();
                 
-        	    /*
-        	    This is the core of our tutorial: we see here how to import external plugin
-        	    written in native code (Java in this case). These plugin are usually ported
-        	    on every other platform and this allows us to write the code only in javascript
-        	    whitout concerning about how the native code works. In this case we imported the "simplemenu"
-        	    and the "toast plugin". It's nice to see how it's easy to make them working. I imported
-        	    the source in my Java code, modified the xml file ( see phonegap documentation first ) and
-        	    finally I defined my menu using only html and javascript and launching toasts into javascript
-        	    callbacks. Following the code will explain you better :)
-        	    */
-        	    
-        	    //Let's define our callbacks for menu that, in this case, will just fire a Toast notification
+                /*
+                This is the core of our tutorial: we see here how to import external plugin
+                written in native code (Java in this case). These plugin are usually ported
+                on every other platform and this allows us to write the code only in javascript
+                whitout concerning about how the native code works. In this case we imported the "simplemenu"
+                and the "toast plugin". It's nice to see how it's easy to make them working. I imported
+                the source in my Java code, modified the xml file ( see phonegap documentation first ) and
+                finally I defined my menu using only html and javascript and launching toasts into javascript
+                callbacks. Following the code will explain you better :)
+                */
                 
-        		var menu_handlers = {
-       				'newTweet': function() {window.plugins.ToastPlugin.show_short("You clicked new tweet menu!");},
-       				'switchAccount': function() {window.plugins.ToastPlugin.show_short("You clicked switch account menu!");},
-       				'showSettings': function() {window.plugins.ToastPlugin.show_short("You clicked settings menu!");} ,
-       				'showAbout': function() {window.plugins.ToastPlugin.show_short("You clicked about menu!");},
-       			};
-        		
-        		window.plugins.SimpleMenu.loadMenu($('#appMenu')[0],
-						   menu_handlers,
-						   function(success) {
-							   console.log(success);
-						   },
-						   function(error) {
-							   console.log(error);
-						   }
-				);
-	      }
+                //Let's define our callbacks for menu that, in this case, will just fire a Toast notification
+                
+                var menu_handlers = {
+                    'newTweet': function() {window.plugins.ToastPlugin.show_short("You clicked new tweet menu!");},
+                    'switchAccount': function() {window.plugins.ToastPlugin.show_short("You clicked switch account menu!");},
+                    'showSettings': function() {window.plugins.ToastPlugin.show_short("You clicked settings menu!");} ,
+                    'showAbout': function() {window.plugins.ToastPlugin.show_short("You clicked about menu!");},
+                };
+                
+                window.plugins.SimpleMenu.loadMenu($('#appMenu')[0],
+                           menu_handlers,
+                           function(success) {
+                               console.log(success);
+                           },
+                           function(error) {
+                               console.log(error);
+                           }
+                );
+          }
             
             function onLoadPage(id) {
                 $(".tweetpage").hide();
@@ -90,34 +90,34 @@
             onMenuItemClicked("menu-timeline");
             
             function showTweets(id) {
-	            var tweetList = "";
-								
-	            if(id == "timeline-page")
-	                var imagePath = "pixmaps/unknown.png"
-	            else
-	                var imagePath = "pixmaps/mentionsdummy.png"
+                var tweetList = "";
+                                
+                if(id == "timeline-page")
+                    var imagePath = "pixmaps/unknown.png"
+                else
+                    var imagePath = "pixmaps/mentionsdummy.png"
 
-	            var messageText = "Hi Turpial mobile!I am in the " + id + " page";
-	            
-	            var values = { avatar : imagePath, username: "4ndreaSt4gi", 
+                var messageText = "Hi Turpial mobile!I am in the " + id + " page";
+                
+                var values = { avatar : imagePath, username: "4ndreaSt4gi", 
                         message: messageText, reposted_by : "Retweeted by Turpial",
                         timestamp : "oct 18, 02:07 am from web in reply to xyz"}
-	            
-	            templates.getTemplate("templates/mobile-status.partial", function(template) {
-	                for(var i = 0; i < 20; i++)
-	                    tweetList += templates.fillTemplate(template, values);
-	                $('#tweetList-' + id).html(tweetList);
-	                myScroll = new iScroll('wrapper-' + id, { hideScrollbar: true, fadeScrollbar: false });
-	            });
+                
+                templates.getTemplate("templates/mobile-status.partial", function(template) {
+                    for(var i = 0; i < 20; i++)
+                        tweetList += templates.fillTemplate(template, values);
+                    $('#tweetList-' + id).html(tweetList);
+                    myScroll = new iScroll('wrapper-' + id, { hideScrollbar: true, fadeScrollbar: false });
+                });
             }
             
             function pageAction(id) {
                 if(id == "timeline-page" || id == "mentions-page")
                     showTweets(id)
             }
-            			
+                        
         });
-				
+                
     </script>
 
 </head>
@@ -143,13 +143,13 @@
         
         <!-- Our timeline-->
         <div id="timeline-page" class="tweetpage">
-	        <div class="list">
-	            <div id="wrapper-timeline-page" style="height: 100%;">
-	                <div id="tweetList-timeline-page" class="scroller">
-	                    <!-- We will insert our tweets here -->
-	                </div>
-	            </div>
-	        </div>
+            <div class="list">
+                <div id="wrapper-timeline-page" style="height: 100%;">
+                    <div id="tweetList-timeline-page" class="scroller">
+                        <!-- We will insert our tweets here -->
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- Our mentions-->
@@ -170,16 +170,16 @@
         
         <!-- Our info-->
         <div id="me-page" class="tweetpage">
-	        <label>The info will be shown here</label>
+            <label>The info will be shown here</label>
         </div>
         
         <!-- Our menu defined -->
         <menu id="appMenu" type="context">
-			<command type="command" label="New tweet" id="menu-newTweet" icon="optionNewTweet.png" action="newTweet" />
-			<command type="command" label="Settings" id="menu-settings" icon="optionSettings.png" action="showSettings" />
-			<command type="command" label="Switch account" id="menu-switchAccount" action="switchAccount" icon="optionSwitch.png" />
-			<command type="command" label="About" id="menu-about" action="showAbout" icon="optionAbout.png" />
-		</menu>
+            <command type="command" label="New tweet" id="menu-newTweet" icon="optionNewTweet.png" action="newTweet" />
+            <command type="command" label="Settings" id="menu-settings" icon="optionSettings.png" action="showSettings" />
+            <command type="command" label="Switch account" id="menu-switchAccount" action="switchAccount" icon="optionSwitch.png" />
+            <command type="command" label="About" id="menu-about" action="showAbout" icon="optionAbout.png" />
+        </menu>
         
 </body>
 </html>

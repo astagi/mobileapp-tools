@@ -4,39 +4,39 @@
  */
 
 var SimpleMenu = function() {
-	var menuPlugin = this;
+    var menuPlugin = this;
 }
 
 SimpleMenu.prototype.setMenuState = function(action, state, win, fail) {
-	PhoneGap.exec(function(result) {
-		win(result);
-	}, function(ex) {
-		fail(ex);
-	}, "SimpleMenu", "setMenuState", [ action, state ]);
+    PhoneGap.exec(function(result) {
+        win(result);
+    }, function(ex) {
+        fail(ex);
+    }, "SimpleMenu", "setMenuState", [ action, state ]);
 }
 
 SimpleMenu.prototype.loadMenu = function(menu, triggers, win, fail) {
-	this.menu = [];
-	this.triggers = triggers;
-	var commands = menu.getElementsByTagName('command');
-	for ( var i = 0; i < commands.length; ++i) {
-		var item = {};
-		item.icon = commands[i].getAttribute('icon');
-		item.action = commands[i].getAttribute('action');
-		item.label = commands[i].getAttribute('label');
-		var disabled = commands[i].getAttribute('disabled');
-		if (disabled == 'disabled')
-			disabled = true;
-		if (disabled == 'null')
-			disabled = false;
-		item.disabled = disabled;
-		this.menu.push(item);
-	}
-	var setRefresh = this.setRefresh;
-	var winning = function() {
-		setRefresh(win, fail);
-	}
-	this.createMenu(winning, fail);
+    this.menu = [];
+    this.triggers = triggers;
+    var commands = menu.getElementsByTagName('command');
+    for ( var i = 0; i < commands.length; ++i) {
+        var item = {};
+        item.icon = commands[i].getAttribute('icon');
+        item.action = commands[i].getAttribute('action');
+        item.label = commands[i].getAttribute('label');
+        var disabled = commands[i].getAttribute('disabled');
+        if (disabled == 'disabled')
+            disabled = true;
+        if (disabled == 'null')
+            disabled = false;
+        item.disabled = disabled;
+        this.menu.push(item);
+    }
+    var setRefresh = this.setRefresh;
+    var winning = function() {
+        setRefresh(win, fail);
+    }
+    this.createMenu(winning, fail);
 }
 
 /*
@@ -46,31 +46,31 @@ SimpleMenu.prototype.loadMenu = function(menu, triggers, win, fail) {
  */
 
 SimpleMenu.prototype.createMenu = function(win, fail) {
-	var menu = this.menu || [];
-	var menuString = JSON.stringify(menu);
-	PhoneGap.exec(function(result) {
-		win(result);
-	}, function(ex) {
-		fail(ex);
-	}, "SimpleMenu", "create", [ menuString ]);
+    var menu = this.menu || [];
+    var menuString = JSON.stringify(menu);
+    PhoneGap.exec(function(result) {
+        win(result);
+    }, function(ex) {
+        fail(ex);
+    }, "SimpleMenu", "create", [ menuString ]);
 }
 
 SimpleMenu.prototype.setRefresh = function(win, fail) {
-	PhoneGap.exec(function(result) {
-		win(result);
-	}, function(ex) {
-		fail(ex);
-	}, "SimpleMenu", "refresh", []);
+    PhoneGap.exec(function(result) {
+        win(result);
+    }, function(ex) {
+        fail(ex);
+    }, "SimpleMenu", "refresh", []);
 }
 
 SimpleMenu.prototype.fireCallback = function(index) {
-	if (this.menu != null && this.menu.length > index) {
-		var action = this.menu[index].action;
+    if (this.menu != null && this.menu.length > index) {
+        var action = this.menu[index].action;
 
-		this.triggers[action].call(this);
-	}
+        this.triggers[action].call(this);
+    }
 }
 
 PhoneGap.addConstructor(function() {
-	PhoneGap.addPlugin("SimpleMenu", new SimpleMenu());
+    PhoneGap.addPlugin("SimpleMenu", new SimpleMenu());
 });

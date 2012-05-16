@@ -1,6 +1,6 @@
 window.templates = function() {
     var templates = {};
-	
+    
     //Check if a template is just in RAM
     function checkTemplate(filename, callback){
         if(templates[filename])
@@ -8,7 +8,7 @@ window.templates = function() {
         else
             return false;
     };
-	
+    
     //Get a template from RAM if present, from local otherwise
     function getTemplate(filename, callback){
         if(templates[filename])
@@ -19,7 +19,7 @@ window.templates = function() {
                 callback(response);
             });
     };
-	
+    
     //Fill a template with specified values
     function fillTemplate(template, values){
         for (var key in values)
